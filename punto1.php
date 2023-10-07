@@ -13,13 +13,14 @@
 
 $lista = [7, 62, 3, 61, 6, 70, 23, 27, 8, 13, 67];//lista original
 
-echo '<br> Lista original:';
+echo '<br><br>';
+echo 'Lista original:';
 foreach($lista as $num){
     echo '<br>'.$num;
 }
 
 echo '<br><br>';
-echo 'Lista ordenada: ';
+echo 'Lista ordenada:';
 ordenar($lista);
 pares($lista);
 impares($lista);
@@ -41,21 +42,22 @@ function ordenar($lista){//ya funciona
     }
 }
 
-function pares($lista){//no terminado
+function pares($lista){//ya funciona
     echo '<br><br>';
     echo 'Numeros pares de mayor a menor:';
     $x = 0;
+    $num = 0;
     for($i=0; $i<count($lista); $i++){
         if($lista[$i] % 2 == 0){
-            $impares[$x] = $lista[$i];
+            $pares[$x] = $lista[$i];
             $x++;
         }
     }
-    for($i=0; $i<count($impares); $i++){
-        for($j=$i; $j<count($impares); $j++){
-            if($impares[$j] > $impares[$i]){
-                $num = $impares[$i];
-                $pares[$i] = $impares[$j];
+    for($i=count($pares)-1; $i>=0; $i--){
+        for($j=$i; $j>=0; $j--){
+            if($pares[$j] < $pares[$i]){
+                $num = $pares[$i];
+                $pares[$i] = $pares[$j];
                 $pares[$j] = $num;
             }
         }
