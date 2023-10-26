@@ -10,6 +10,5 @@
         <a href="punto_2/punto2.php">Punto 2</a><br><br>
         <a href="punto_3/punto3.php">Punto 3</a><br><br>
         <a href="punto4.php">Punto 4</a>
-        <input type="" name="" id="">
     </body>
     </html>
